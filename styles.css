@@ -30,7 +30,7 @@ body {
 }
 
 body {
-  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-family: 'Barlow Semi Condensed', 'Helvetica Neue', sans-serif;
   background: radial-gradient(
     120% 140% at 50% 0%,
     var(--bg-top),
@@ -47,7 +47,7 @@ body {
 .app {
   width: 100%;
   max-width: 720px;
-  padding: 28px 24px 100px;
+  padding: 45px 24px 100px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -55,9 +55,9 @@ body {
 
 /* ---------- Header ---------- */
 .topbar {
-  border: 1px solid var(--panel-border);
+  border: 3px solid var(--panel-border);
   border-radius: 10px;
-  padding: 22px 22px;
+  padding: 28px 30px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -67,27 +67,30 @@ body {
 
 .title-box h1 {
   margin: 0;
-  font-size: clamp(20px, 4vw, 28px);
-  line-height: 1.18;
-  letter-spacing: 1px;
-  font-weight: 800;
-  color: var(--title-color);
+  font-size: clamp(20px, 10vw, 35px);
+  line-height: 0.85;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: var(--white);
   text-transform: uppercase;
 }
 
 .score-box {
   background: var(--white);
   border-radius: 8px;
-  padding: 10px 20px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 40px;
   min-width: 78px;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
 }
 
 .score-box .score-label {
   display: block;
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 600;
   letter-spacing: 1.5px;
   color: var(--score-label);
   margin-bottom: 2px;
@@ -125,7 +128,7 @@ main {
   margin: 0 auto;
 }
 
-.choices-wrap svg.connector {
+.choices-wrap img.connector {
   position: absolute;
   inset: 0;
   width: 100%;

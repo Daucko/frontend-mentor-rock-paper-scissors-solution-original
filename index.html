@@ -14,65 +14,15 @@
     <link rel="stylesheet" href="styles.css" />
 
     <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Shared icon defs -->
-    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
-      <defs>
-        <g id="icon-rock">
-          <path
-            d="M50 12 C58 12 64 18 64 25 C71 26 76 33 74 41 C80 45 82 54 77 61 C77 71 68 79 57 79 L43 79 C31 79 22 70 22 58 C22 54 23 51 25 48 C22 39 27 29 36 27 C38 18 44 12 50 12 Z"
-          />
-        </g>
-        <g id="icon-paper">
-          <rect x="30" y="46" width="40" height="38" rx="16" />
-          <rect
-            x="24"
-            y="15"
-            width="13"
-            height="38"
-            rx="6.5"
-            transform="rotate(-10 30.5 34)"
-          />
-          <rect x="43.5" y="10" width="13" height="42" rx="6.5" />
-          <rect
-            x="62"
-            y="15"
-            width="13"
-            height="38"
-            rx="6.5"
-            transform="rotate(10 68.5 34)"
-          />
-          <rect
-            x="10"
-            y="46"
-            width="26"
-            height="16"
-            rx="8"
-            transform="rotate(-40 23 54)"
-          />
-        </g>
-        <g id="icon-scissors">
-          <rect x="32" y="50" width="36" height="34" rx="15" />
-          <rect
-            x="30"
-            y="14"
-            width="14"
-            height="46"
-            rx="7"
-            transform="rotate(-16 37 37)"
-          />
-          <rect
-            x="56"
-            y="14"
-            width="14"
-            height="46"
-            rx="7"
-            transform="rotate(16 63 37)"
-          />
-        </g>
-      </defs>
-    </svg>
 
     <div class="app">
       <header class="topbar">
@@ -89,7 +39,7 @@
         <!-- CHOICE SCREEN -->
         <section class="screen active" id="choiceScreen">
           <div class="choices-wrap">
-            <svg
+            <!-- <svg
               class="connector"
               viewBox="0 0 100 100"
               preserveAspectRatio="none"
@@ -97,7 +47,8 @@
               <line x1="20" y1="16" x2="80" y2="16"></line>
               <line x1="20" y1="16" x2="50" y2="82"></line>
               <line x1="80" y1="16" x2="50" y2="82"></line>
-            </svg>
+            </svg> -->
+            <img src="/images/bg-triangle.svg" class="connector" alt="" />
 
             <button
               class="choice-node"
@@ -105,9 +56,8 @@
               aria-label="Choose paper"
             >
               <span class="disc"
-                ><span class="inner"
-                  ><svg viewBox="0 0 100 100">
-                    <use href="#icon-paper"></use></svg></span
+                ><span class="inner">
+                  <img src="/images/icon-paper.svg" alt="" /> </span
               ></span>
             </button>
             <button
@@ -116,9 +66,8 @@
               aria-label="Choose scissors"
             >
               <span class="disc"
-                ><span class="inner"
-                  ><svg viewBox="0 0 100 100">
-                    <use href="#icon-scissors"></use></svg></span
+                ><span class="inner">
+                  <img src="/images/icon-scissors.svg" alt="" /></span
               ></span>
             </button>
             <button
@@ -128,8 +77,7 @@
             >
               <span class="disc"
                 ><span class="inner"
-                  ><svg viewBox="0 0 100 100">
-                    <use href="#icon-rock"></use></svg></span
+                  ><img src="/images/icon-rock.svg" alt="" /></span
               ></span>
             </button>
           </div>
@@ -184,48 +132,7 @@
         </button>
         <h2>Rules</h2>
         <div class="rules-diagram">
-          <svg viewBox="0 0 300 260">
-            <defs>
-              <marker
-                id="arrowhead"
-                markerWidth="8"
-                markerHeight="8"
-                refX="6"
-                refY="4"
-                orient="auto"
-              >
-                <path d="M0,0 L8,4 L0,8 Z" fill="#b7bccb"></path>
-              </marker>
-            </defs>
-            <path class="rules-arrow" d="M195 55 L105 55"></path>
-            <path class="rules-arrow" d="M95 75 L140 165"></path>
-            <path class="rules-arrow" d="M205 75 L160 165"></path>
-            <text class="rules-label" x="150" y="42">BEATS</text>
-            <text class="rules-label" x="88" y="120">BEATS</text>
-            <text class="rules-label" x="212" y="120">BEATS</text>
-
-            <g class="rules-node" transform="translate(60,55)">
-              <circle class="ring" r="34"></circle>
-              <circle class="inner-disc" r="24"></circle>
-              <svg x="-15" y="-15" width="30" height="30" viewBox="0 0 100 100">
-                <use href="#icon-paper"></use>
-              </svg>
-            </g>
-            <g class="rules-node" transform="translate(240,55)">
-              <circle class="ring" r="34"></circle>
-              <circle class="inner-disc" r="24"></circle>
-              <svg x="-15" y="-15" width="30" height="30" viewBox="0 0 100 100">
-                <use href="#icon-scissors"></use>
-              </svg>
-            </g>
-            <g class="rules-node" transform="translate(150,200)">
-              <circle class="ring" r="34"></circle>
-              <circle class="inner-disc" r="24"></circle>
-              <svg x="-15" y="-15" width="30" height="30" viewBox="0 0 100 100">
-                <use href="#icon-rock"></use>
-              </svg>
-            </g>
-          </svg>
+          <img src="/images/image-rules.svg" alt="" />
         </div>
       </div>
     </div>
