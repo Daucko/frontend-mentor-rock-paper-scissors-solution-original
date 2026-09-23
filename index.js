@@ -1,8 +1,8 @@
 var beats = { paper: 'rock', scissors: 'paper', rock: 'scissors' };
 var iconFor = {
-  paper: '#icon-paper',
-  scissors: '#icon-scissors',
-  rock: '#icon-rock',
+  paper: '/images/icon-paper.svg',
+  scissors: '/images/icon-scissors.svg',
+  rock: '/images/icon-rock.svg',
 };
 
 var score = 0;
@@ -23,14 +23,13 @@ var verdictTimer = null;
 
 function setPickVisual(el, choice) {
   el.classList.remove('paper', 'scissors', 'rock', 'revealed');
-  el.querySelector('.inner svg use') &&
-    el.querySelector('.inner svg use').remove();
-  var svg = el.querySelector('.inner svg');
-  svg.innerHTML = '';
+  var inner = el.querySelector('.inner');
+  inner.innerHTML = '';
   if (choice) {
-    var use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
-    use.setAttribute('href', iconFor[choice]);
-    svg.appendChild(use);
+    var img = document.createElement('img');
+    img.src = iconFor[choice];
+    img.alt = '';
+    inner.appendChild(img);
     el.classList.add(choice);
   }
 }
