@@ -235,12 +235,14 @@ main {
 
 .attribution {
   position: static;
+  margin-top: 100px;
   background-color: rgba(47, 255, 158, 0.614);
   padding: 10px;
-  font-size: 0.6875rem;
+  font-size: 1.1rem;
   text-align: center;
   text-shadow: 10px 10px 5px 5px rgba(140, 156, 194, 0.35);
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
@@ -645,5 +647,14 @@ main {
   .play-again {
     padding: 0.9375rem 3.375rem;
     margin-bottom: -50px;
+  }
+
+  .attribution {
+    position: static;
+    background-color: rgba(47, 255, 158, 0.614);
+    padding: 10px;
+    font-size: 0.6875rem;
+    text-align: center;
+    text-shadow: 10px 10px 5px 5px rgba(140, 156, 194, 0.35);
   }
 }
