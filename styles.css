@@ -525,7 +525,7 @@ main {
   marker-end: url(#arrowhead);
 }
 
-@media (max-width: 375px) {
+@media (max-width: 900px) {
   .app {
     padding: 20px 16px 90px;
     border: 1px solid red;
